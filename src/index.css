@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --color-navy-950: #071329;
+  --color-navy-900: #0b1f4a;
+  --color-navy-800: #123a73;
+  --color-navy-700: #1a4f96;
+  --color-navy-100: #e8eef8;
+  --color-navy-50: #f5f7fb;
+  --color-accent: #d61f2c;
+  --color-accent-dark: #b11621;
+  --color-gold: #d4a017;
+  --color-gold-soft: #f4e4b0;
+  --color-ink: #1a2233;
+  --color-muted: #5c667a;
+  --color-line: #dbe1ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-navy-50);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-navy-800);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
